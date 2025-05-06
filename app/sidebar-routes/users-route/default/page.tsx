@@ -1,8 +1,8 @@
-import Navbar from "../components/Navbar"
-import Sidebar from "../components/Sidebar"
+import Navbar from "../../../components/Navbar"
+import Sidebar from "../../../components/Sidebar"
 
 // Example for /app/analytics/page.tsx
-export default function SettingsPage() {
+export default function DefaultPage() {
     return (
       <>
       <Sidebar/>
@@ -20,7 +20,7 @@ export default function SettingsPage() {
                   ))}
                 </div>
                 
-        <h1>Setting Page</h1>
+        <h1>Default Page</h1>
                 {/* Chart Section */}
                 <div className="bg-white p-6 rounded-lg shadow-sm">
                   <h2 className="text-xl font-semibold mb-4">Analytics Overview</h2>

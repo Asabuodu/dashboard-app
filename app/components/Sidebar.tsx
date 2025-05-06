@@ -4,24 +4,13 @@
 //import Link from 'next/link';
 // import { usePathname } from 'next/navigation';
 
-import Dashboard from './sidebarcomp/Dashboard';
+import Dashboard from './sidebarcomp/home';
 import Formelement from './sidebarcomp/forms';
+import Tables from './sidebarcomp/Tables';
 import UIelement from './sidebarcomp/Uielement';
+// import Users from './sidebarcomp/User';
 
 export default function Sidebar() {
-  // const pathname = usePathname();
-
-  // const navigation = [
-  //   { name: 'Home', href: '/', icon: HomeIcon },
-  //   { name: 'Analytics', href: '/analytics', icon: ChartBarIcon },
-  //   { name: 'Users', href: '/users', icon: UsersIcon },
-  //   { name: 'Settings', href: '/settings', icon: Cog6ToothIcon },
-  //   { name: 'Form Stuff', href: '/form', icon: DocumentCheckIcon },
-  //   {name: 'Data Table', href: '/data', icon: TableCellsIcon},
-  //   {name: 'Google Maps', href: '/maps', icon: MapIcon },
-  //   {name: 'Extral Pages', href: '/extra', icon: DocumentDuplicateIcon},
-  //   // Add more navigation items as needed
-  // ];
 
   return (
     <div className=" bg-blue-950 shadow-lg scroll-auto overflow-y-auto h-screen text-xs">
@@ -29,6 +18,9 @@ export default function Sidebar() {
       < Dashboard />
       <UIelement />
       <Formelement />
+      <Tables/>
+      {/* <Users/> */}
+      
       {/* <div className="mb-8">
         <h1 className="text-xl font-bold text-gray-50">Dashboard</h1>
       </div>

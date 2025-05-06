@@ -1,8 +1,8 @@
-import Navbar from "../components/Navbar"
-import Sidebar from "../components/Sidebar"
+import Navbar from "../../../components/Navbar"
+import Sidebar from "../../../components/Sidebar"
 
 // Example for /app/analytics/page.tsx
-export default function AnalyticsPage() {
+export default function NavigationPage() {
     return (
       <>
       <Sidebar/>
@@ -20,7 +20,7 @@ export default function AnalyticsPage() {
                   ))}
                 </div>
                 
-        <h1>Analytics Page</h1>
+        <h1>Navigation Page</h1>
                 {/* Chart Section */}
                 <div className="bg-white p-6 rounded-lg shadow-sm">
                   <h2 className="text-xl font-semibold mb-4">Analytics Overview</h2>
@@ -33,3 +33,5 @@ export default function AnalyticsPage() {
       </>
     )
   }
+
+    

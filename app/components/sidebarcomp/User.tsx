@@ -16,7 +16,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import {  ChevronRightIcon } from '@heroicons/react/16/solid';
 
-export default function Dashboard() {
+export default function UsersPage() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(true);
 
@@ -36,13 +36,13 @@ export default function Dashboard() {
 
   return (
     <div className="bg-blue-950 p-2 w-40 overflow-y-auto mb-3">
-      <p className="text-gray-400 mb-4">Navigation</p>
+      <p className="text-gray-400 mb-4">User</p>
       {/* Dropdown Header */}
       <div 
         className="flex justify-between items-center cursor-pointer"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <h1 className="text-xs font-extralight mb-4 text-white">Dashboard</h1>
+        <h1 className="text-xs font-extralight mb-4 text-white">Bootstrap Table</h1>
         <ChevronDownIcon 
           className={`h-5 w-5 text-gray-50 transform transition-transform ${
             isOpen ? 'rotate-180' : ''

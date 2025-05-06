@@ -1,28 +1,38 @@
 'use client';
 import { useState } from 'react';
 import { 
-  DocumentIcon,
-  PencilIcon,
-  PaperClipIcon,
-  SwatchIcon,
-  WindowIcon,
-  ServerIcon,
+  CreditCardIcon,
+  ServerStackIcon,
+  HashtagIcon,
+  CalendarDateRangeIcon,
 } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { ChevronRightIcon} from '@heroicons/react/16/solid';
+import { ChevronRightIcon } from '@heroicons/react/16/solid';
 
-export default function UIElement() {
+export default function Tables() {
   const pathname = usePathname();
-  const [isOpenBasic, setIsOpenBasic] = useState(true);
-  const [isOpenExtra, setIsOpenExtra] = useState(true);
+  const [isOpenBootstrapTable, setIsOpenBootstrapTable] = useState(true);
+  const [isOpenDataTable, setIsOpenDataTable] = useState(true);
+  const [isOpenDataTableExt, setIsOpenDataTableExt] = useState(true);
+  const [isOpenHandsonTable, setIsOpenHandsonTable] = useState(true);
 
-  const basicComponents = [
+  const BootstrapTable = [
     { name: 'Default', href: '/default', icon: ChevronRightIcon  },
     { name: 'Users', href: '/users', icon: ChevronRightIcon  },
   ];
 
-  const readytousecomponents = [
+  const DataTable = [
+    { name: 'Default', href: '/default', icon: ChevronRightIcon  },
+    { name: 'Users', href: '/users', icon: ChevronRightIcon  },
+  ];
+
+  const DataTableExt = [
+    { name: 'Default', href: '/default', icon: ChevronRightIcon  },
+    { name: 'Users', href: '/users', icon: ChevronRightIcon  },
+  ];
+
+  const HandsonTable = [
     { name: 'PageLayout', href: '/page', icon: ChevronRightIcon  },
     { name: 'Navigation', href: '/navigation', icon: ChevronRightIcon  },
     { name: 'Widget', href:'/widget', icon: ChevronRightIcon  },
@@ -90,18 +100,33 @@ export default function UIElement() {
     <div className="">
       <div className="px-4 pt-4">
         <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide">
-          Forms
+          Tables
         </p>
       </div>
 
       <DropdownSection
-        title="Form Components"
-        items={basicComponents}
-        isOpen={isOpenBasic}
-        setIsOpen={setIsOpenBasic}
-        Icon={DocumentIcon}
+        title="Bootstrap Table"
+        items={BootstrapTable}
+        isOpen={isOpenBootstrapTable}
+        setIsOpen={setIsOpenBootstrapTable}
+        Icon={CreditCardIcon}
       />
 
+      <DropdownSection
+        title="Data Table"
+        items={DataTable}
+        isOpen={isOpenDataTable}
+        setIsOpen={setIsOpenDataTable}
+        Icon={ServerStackIcon}
+      />
+
+      <DropdownSection
+        title="Data Table Extension"
+        items={DataTableExt}
+        isOpen={isOpenDataTableExt}
+        setIsOpen={setIsOpenDataTableExt}
+        Icon={ServerStackIcon}
+      />
 
         <Link 
           href="/sidebar-routes/users-route/animations" 
@@ -111,73 +136,22 @@ export default function UIElement() {
               : 'text-white'
           }`}
         > 
-          <PencilIcon className={`w-5 mr-3 ml-1.5 ${
+          <HashtagIcon className={`w-5 mr-3 ml-1.5 ${
             pathname === "/sidebar-routes/users-route/animations" 
               ? 'text-orange-500' 
               : 'text-gray-50'
           }`}/> 
-          Form Picker
+          FooTable
           {/* <ChevronRightIcon  className="h-5 w-5 ml-14 text-gray-50"/> */}
         </Link>
 
-        <Link 
-          href="/sidebar-routes/users-route/animations" 
-          className={`font-light text-xs items-center p-2 mr-4 flex hover:bg-blue-900 rounded-lg ${
-            pathname === "/sidebar-routes/users-route/anomations" 
-              ? 'text-orange-500 bg-blue-900' 
-              : 'text-white'
-          }`}
-        > 
-          <PaperClipIcon className={`w-5 mr-3 ml-1.5 ${
-            pathname === "/sidebar-routes/users-route/animations" 
-              ? 'text-orange-500' 
-              : 'text-gray-50'
-          }`}/> 
-          Form Select
-          {/* <ChevronRightIcon  className="h-5 w-5 ml-14 text-gray-50"/> */}
-        </Link>
-
-        <Link 
-          href="/sidebar-routes/users-route/icons" 
-          className={`font-light text-xs items-center p-2 mr-4 flex hover:bg-blue-900 rounded-lg ${
-            pathname === "/sidebar-routes/users-route/anomations" 
-              ? 'text-orange-500 bg-blue-900' 
-              : 'text-white'
-          }`}
-        > 
-          <SwatchIcon className={`w-5 mr-3 ml-1.5 ${
-            pathname === "/sidebar-routes/users-route/icons" 
-              ? 'text-orange-500' 
-              : 'text-gray-50'
-          }`}/> 
-          Form Masking
-          {/* <ChevronRightIcon  className="h-5 w-5 ml-14 text-gray-50"/> */}
-        </Link>
-
-        <Link 
-          href="/sidebar-routes/users-route/icons" 
-          className={`font-light text-xs items-center p-2 mr-4 flex hover:bg-blue-900 rounded-lg ${
-            pathname === "/sidebar-routes/users-route/anomations" 
-              ? 'text-orange-500 bg-blue-900' 
-              : 'text-white'
-          }`}
-        > 
-          <WindowIcon className={`w-5 mr-3 ml-1.5 ${
-            pathname === "/sidebar-routes/users-route/icons" 
-              ? 'text-orange-500' 
-              : 'text-gray-50'
-          }`}/> 
-          Form Wizard
-          {/* <ChevronRightIcon  className="h-5 w-5 ml-14 text-gray-50"/> */}
-        </Link>
-
-
+      
         <DropdownSection
-        title="Ready to use"
-        items={readytousecomponents}
-        isOpen={isOpenExtra}
-        setIsOpen={setIsOpenExtra}
-        Icon={ServerIcon}
+        title="Handson Table"
+        items={HandsonTable}
+        isOpen={isOpenHandsonTable}
+        setIsOpen={setIsOpenHandsonTable}
+        Icon={CalendarDateRangeIcon}
         />
 
 
