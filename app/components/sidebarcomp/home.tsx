@@ -15,14 +15,14 @@ import { ChevronRightIcon } from '@heroicons/react/16/solid';
 export default function Dashboard() {
   // usePathname hook to get the current pathname
   const pathname = usePathname();
-  const [isOpenDashboard, setIsOpenDashboard] = useState(true);
-  const [isOpenPagelayout, setIsOpenPagelayout] = useState(true);
-  const [isOpenWidget, setIsOpenWidget] = useState(true);
+  const [isOpenDashboard, setIsOpenDashboard] = useState(false);
+  const [isOpenPagelayout, setIsOpenPagelayout] = useState(false);
+  const [isOpenWidget, setIsOpenWidget] = useState(false);
 
   const DashboardComponents = [
-    { name: 'Default', href: '/sidebar-routes/users-route/default', icon: ChevronRightIcon  },
-    { name: 'CRM', href: '/sidebar-routes/users-route/crm', icon: ChevronRightIcon  },
-    { name: 'Analytics', href: '/sidebar-routes/users-route/analytics', icon: ChevronRightIcon  },
+    { name: 'Default', href: '/sidebar-routes/dashboard-route/default', icon: ChevronRightIcon  },
+    { name: 'CRM', href: '/sidebar-routes/dashboard-route/crm', icon: ChevronRightIcon  },
+    { name: 'Analytics', href: '/sidebar-routes/dashboard-route/analytics', icon: ChevronRightIcon  },
   ];
   
   const PageLayoutComponents = [
@@ -119,15 +119,15 @@ export default function Dashboard() {
       />
 
         <Link 
-          href="/sidebar-routes/users-route/animations" 
+          href="/sidebar-routes/dashboard-route/navigation" 
           className={`font-light text-xs items-center p-2 mr-4 flex hover:bg-blue-900 rounded-lg ${
-            pathname === "/sidebar-routes/users-route/anomations" 
-              ? 'text-orange-500 bg-blue-900' 
+            pathname === "/sidebar-routes/dashboard-route/navigation" 
+              ? 'text-orange-500' 
               : 'text-white'
           }`}
         > 
           <Bars3Icon className={`w-5 mr-3 ml-1.5 ${
-            pathname === "/sidebar-routes/users-route/animations" 
+            pathname === "/sidebar-routes/dashboard-route/navigation" 
               ? 'text-orange-500' 
               : 'text-gray-50'
           }`}/> 

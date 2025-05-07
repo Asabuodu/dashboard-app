@@ -123,9 +123,9 @@ import { ChevronRightIcon, CogIcon, CubeTransparentIcon } from '@heroicons/react
 
 export default function UIElement() {
   const pathname = usePathname();
-  const [isOpenBasic, setIsOpenBasic] = useState(true);
-  const [isOpenAdvanced, setIsOpenAdvanced] = useState(true);
-  const [isOpenExtra, setIsOpenExtra] = useState(true);
+  const [isOpenBasic, setIsOpenBasic] = useState(false);
+  const [isOpenAdvanced, setIsOpenAdvanced] = useState(false);
+  const [isOpenExtra, setIsOpenExtra] = useState(false);
 
   const basicComponents = [
     { name: 'Default', href: '/default', icon: ChevronRightIcon  },

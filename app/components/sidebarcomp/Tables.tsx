@@ -12,10 +12,10 @@ import { ChevronRightIcon } from '@heroicons/react/16/solid';
 
 export default function Tables() {
   const pathname = usePathname();
-  const [isOpenBootstrapTable, setIsOpenBootstrapTable] = useState(true);
-  const [isOpenDataTable, setIsOpenDataTable] = useState(true);
-  const [isOpenDataTableExt, setIsOpenDataTableExt] = useState(true);
-  const [isOpenHandsonTable, setIsOpenHandsonTable] = useState(true);
+  const [isOpenBootstrapTable, setIsOpenBootstrapTable] = useState(false);
+  const [isOpenDataTable, setIsOpenDataTable] = useState(false);
+  const [isOpenDataTableExt, setIsOpenDataTableExt] = useState(false);
+  const [isOpenHandsonTable, setIsOpenHandsonTable] = useState(false);
 
   const BootstrapTable = [
     { name: 'Default', href: '/default', icon: ChevronRightIcon  },

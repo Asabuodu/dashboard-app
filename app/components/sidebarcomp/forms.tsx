@@ -14,8 +14,8 @@ import { ChevronRightIcon} from '@heroicons/react/16/solid';
 
 export default function UIElement() {
   const pathname = usePathname();
-  const [isOpenBasic, setIsOpenBasic] = useState(true);
-  const [isOpenExtra, setIsOpenExtra] = useState(true);
+  const [isOpenBasic, setIsOpenBasic] = useState(false);
+  const [isOpenExtra, setIsOpenExtra] = useState(false);
 
   const basicComponents = [
     { name: 'Default', href: '/default', icon: ChevronRightIcon  },
