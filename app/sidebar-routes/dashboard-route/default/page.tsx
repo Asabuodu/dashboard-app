@@ -6,6 +6,7 @@ import { EarningsCard } from "@/app/components/cards/earningcard"
 import { TaskCard } from "@/app/components/cards/taskcard"
 import { DownloadCard } from "@/app/components/cards/downloadcard"
 import { SalesCard } from "@/app/components/cards/salescard"
+import { DonutChart } from "@/app/components/cards/donutchart"
 
 // Example for /app/analytics/page.tsx
 export default function DefaultPage() {
@@ -48,7 +49,9 @@ export default function DefaultPage() {
           <div className="rounded-lg col-span-3">
             <SalesCard/>
           </div>
-          <div className="rounded-lg">1 </div>
+          <div className="rounded-lg">
+            <DonutChart/>
+             </div>
         </div>
               </main>
             </div>
