@@ -41,13 +41,13 @@ const chartConfig = {
 
 export function SalesCard() {
   return (
-    <Card className="">
+    <Card className="h-7/12">
       <CardHeader>
         <CardTitle>Sales Analytics</CardTitle>
         <CardDescription>This shows the sales data range for the past week</CardDescription>
       </CardHeader>
       <CardContent>
-        <ChartContainer config={chartConfig} className="">
+        <ChartContainer config={chartConfig} className="h-6/12 w-full">
           <LineChart
             accessibilityLayer
             data={chartData}

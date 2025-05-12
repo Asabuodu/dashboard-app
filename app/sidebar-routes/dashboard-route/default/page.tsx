@@ -26,18 +26,18 @@ export default function DefaultPage() {
           </div>
         
         {/* 2nd card */}
-          <div className="bg-green-500 p-4 rounded-lg">
+          <div className="bg-gradient-to-r from-green-400 to-green-300 p-4 rounded-lg">
             <ViewsCard/>
              {/* <EarningsCard/> */}
           </div>
 
         {/* 3rd card */}
-          <div className="bg-purple-400 p-4 rounded-lg">
+          <div className="bg-gradient-to-r from-red-400 to-red-300 p-4 rounded-lg">
             <TaskCard/>
           </div>
 
           {/* 4th card */}
-          <div className="bg-purple-500 p-4 rounded-lg">
+          <div className="bg-gradient-to-r  from-blue-400 to-blue-300 p-4 rounded-lg">
             <DownloadCard/>
           </div>
         </div>

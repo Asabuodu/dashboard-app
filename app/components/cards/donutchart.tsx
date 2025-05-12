@@ -32,23 +32,23 @@ const chartConfig = {
   },
   chrome: {
     label: "Chrome",
-    color: "hsl(var(--chart-1))",
+    color: "hsl(9 64.2% 74.4% / 0.85)",
   },
   safari: {
     label: "Safari",
-    color: "hsl(var(--chart-2))",
+    color: "hsl(299 23% 87.9%)",
   },
   firefox: {
     label: "Firefox",
-    color: "hsl(var(--chart-3))",
+    color: "hsl(210, 80%, 55%)",
   },
   edge: {
     label: "Edge",
-    color: "hsl(var(--chart-4))",
+    color: "hsl(185 76.3% 31.3% / 0.94)",
   },
   other: {
     label: "Other",
-    color: "hsl(var(--chart-5))",
+    color: "hsl(248 72% 51.7%)",
   },
 } satisfies ChartConfig
 
@@ -58,7 +58,7 @@ export function DonutChart() {
   }, [])
 
   return (
-    <Card className="flex flex-col">
+    <Card className="flex flex-col h-7/12">
       <CardHeader className="items-center pb-0">
         <CardTitle>Pie Chart - Donut with Text</CardTitle>
         <CardDescription>January - June 2024</CardDescription>
