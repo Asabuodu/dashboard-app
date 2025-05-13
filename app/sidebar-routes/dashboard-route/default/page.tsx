@@ -8,6 +8,8 @@ import { DownloadCard } from "@/app/components/cards/downloadcard"
 import { SalesCard } from "@/app/components/cards/salescard"
 import { DonutChart } from "@/app/components/cards/donutchart"
 import Appsalescard from "@/app/components/cards/appsalescard"
+import UserActivity from "@/app/components/cards/useractcard"
+import LatestUpdates from "@/app/components/cards/latestupdate"
 
 // Example for /app/analytics/page.tsx
 export default function DefaultPage() {
@@ -42,7 +44,7 @@ export default function DefaultPage() {
             <DownloadCard/>
           </div>
         </div>
-
+<br />
 
         {/* sales Analytics */}
 
@@ -54,7 +56,7 @@ export default function DefaultPage() {
             <DonutChart/>
              </div>
         </div>
-
+<br />
 
         {/* application sales and user activities */}
 
@@ -64,22 +66,15 @@ export default function DefaultPage() {
             <Appsalescard/>
           </div>
           <div className="rounded-lg">
-            <DonutChart/>
+              <UserActivity/>
              </div>
         </div>
-
+ <br />
 
         {/* latest update and user information */}
 
 
-        {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-4 p-4 h-96 mb-20">
-          <div className="rounded-lg col-span-2">
-            <SalesCard/>
-          </div>
-          <div className="rounded-lg col-span-2">
-            <DonutChart/>
-             </div>
-        </div> */}
+        <LatestUpdates/>
 
 
               </main>
