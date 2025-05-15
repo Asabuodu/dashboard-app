@@ -15,6 +15,7 @@ bun dev
 ```
 
 npm install @heroicons/react  # For icons
+https://ui.shadcn.com/ for libraries
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
